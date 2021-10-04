@@ -19,25 +19,20 @@ from bs4 import BeautifulSoup
 def main(request):
     url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1/5/"
 
+    cctv_result=[]
     res=requests.get(url)
-    soup = BeautifulSoup(res.content, 'html.parser')
 
-    for i in soup.find_all('row'):
-        rows.append({"stop_no": i.stop_no.string,
-                     "stop_nm": i.stop_nm.string,
-                     "xcode": i.xcode.string,
-                     "ycode": i.ycode.string})
+    rdata=res.json()['safeOpenCCTV_nw']
+    items=rdata.get('row')
 
-    rdata=res.json()
-    print(rdata)
-    # items=rdata.get('row')
-    
-    # print(items)
-    
-    context = {
-        'rdata': rdata
-    }
-    
+    for result in items:
+        context = {
+            'WGSXPT' : result['WGSXPT']
+        }
+        cctv_result.append(context)
 
-    return render(request, 'map/main.html')
+    print(cctv_result)
+
+
+    return render(request, 'map/main.html', context)
 

@@ -20,6 +20,12 @@
 	</script>
 
 	<h1>cctv 확인</h1>
+	{% for class in class_object %}
+		{{class.latitude}}
+		{{class.longtitude}}
+	{% endfor %}
+
+	<br>
 
 	{% for xy in location %}
 

@@ -19,7 +19,13 @@
 	</script>
 
 	<h1>cctv 확인</h1>
-	{{context.WGSXPT}}
+	{% for xy in location %}
+
+       	x 좌표 : {{xy.x}} 
+		y 좌표 : {{xy.y}}
+		<br>
+    {% endfor %}
+
 
 </body>
 </html>

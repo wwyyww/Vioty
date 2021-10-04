@@ -14,13 +14,17 @@ def main(request):
     items=rdata.get('row')
 
     for result in items:
-        context = {
-            'WGSXPT' : result['WGSXPT']
+        location = {
+            'x' : result['WGSXPT'],
+            'y' : result['WGSYPT']
         }
-        cctv_result.append(context)
+        cctv_result.append(location)
 
-    print(cctv_result)
+    items = {
+        'location' : cctv_result
+    }
 
+    print(items)
 
-    return render(request, 'map/main.html', context)
+    return render(request, 'map/main.html', items)
 

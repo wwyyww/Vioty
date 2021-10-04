@@ -10,11 +10,13 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d02b33e49797d9e083e9e309c02505a2"></script>
 	<script>
 		var container = document.getElementById('map');
-		var options = {
-			// center: new kakao.maps.LatLng(33.450701, 126.570667),
-			center : new kakao.maps.LatLng(37.6151985549786, 127.062364906238),
-			level: 3
-		};
+		for (var class in {{class_object}}){
+			var options = {
+				// center: new kakao.maps.LatLng(33.450701, 126.570667),
+				center : new kakao.maps.LatLng(class.latitude, class.longtitude),
+				level: 3
+			};
+		}
 
 		var map = new kakao.maps.Map(container, options);
 	</script>
@@ -44,7 +46,6 @@
 		for(var i=0 ; i < v.length ; i++){
 			var tmpString = v[i];
 			document.write(tmpString[j]);
-
 		}
 
 

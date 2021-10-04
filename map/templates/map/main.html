@@ -27,32 +27,50 @@
 
 	<br>
 
-	{% for xy in location %}
 
-       	x 좌표 : {{xy.x}} 
-		y 좌표 : {{xy.y}}
-		<br>
-    {% endfor %}
+	<div id="facility_lat" style="display: none">
+		{% for xy in location %}
+			{{ xy.x }},
+		{% endfor %}
+	</div>
+	<div id="facility_lng" style="display: none">
+		{% for xy in location %}
+			{{ xy.y }},
+		{% endfor %}
+	</div>
+
+
+
 
 	<script>
-		// var person = JSON.parse("{{ location|escapejs }}");
 
-		var v="{{location|escapejs}}"
-		document.write(v.length);
-		document.write(v);
+		var list_lat = document.getElementById("facility_lat").innerText.split(',');
+		var list_lng = document.getElementById("facility_lng").innerText.split(',');
+		var coffeePositions = new Array();
+		for(var idx=0; idx<list_lat.length; idx++){
+			// var data = list[idx];
+			var data_lat = list_lat[idx];
+			var data_lng = list_lng[idx];
+			// coffeePositions.push(new kakao.maps.LatLng(data.위도, data.경도));
+			coffeePositions.push(new kakao.maps.LatLng(data_lat, data_lng));
+		}
+		
 
-		for(var i=0 ; i < v.length ; i++){
-			var tmpString = v[i];
-			document.write(tmpString[j]);
+		// var marker = new kakao.maps.Marker({
+		// 		position: coffeePositions[0]
+		// 	});
+		
+		// marker.setMap(map);
 
+
+		for (var i = 0; i < coffeePositions.length; i ++) {
+			// 마커를 생성합니다
+			var marker = new kakao.maps.Marker({
+				map: map, // 마커를 표시할 지도
+				position: coffeePositions[i] // 마커를 표시할 위치
+			});
 		}
 
-
-
-
-
-		// document.write("HTML출력");
-		// document.write(person);
 
 
 

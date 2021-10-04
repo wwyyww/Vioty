@@ -2,7 +2,9 @@ from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
 from map.models import Cctv, Violent
-from django.db import connection
+
+import json
+
 
 
 # Create your views here.
@@ -43,9 +45,11 @@ def main(request):
     
     class_object=Cctv.objects.all()
 
+    data=json.dumps(cctv_result)
+
     items = {
         'location' : cctv_result,
-        'class_object' : class_object
+        'data' : data
     }
     
     return render(request, 'map/main.html', items)

@@ -28,6 +28,31 @@
 		<br>
     {% endfor %}
 
+	<script>
+		// var person = JSON.parse("{{ location|escapejs }}");
+
+		var v="{{location|escapejs}}"
+		document.write(v.length);
+		document.write(v);
+
+		for(var i=0 ; i < v.length ; i++){
+			var tmpString = v[i];
+			document.write(tmpString[j]);
+
+		}
+
+
+
+
+
+		// document.write("HTML출력");
+		// document.write(person);
+
+
+
+
+	</script>
+
 
 
 </body>

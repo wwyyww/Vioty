@@ -36,7 +36,5 @@ def main(request):
         'location' : cctv_result
     }
 
-    print(items)
 
     return render(request, 'map/main.html', items)
-

@@ -20,4 +20,5 @@ import map.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', map.views.main, name='main' ),
+    path('login/', map.views.login, name='login'),
 ]

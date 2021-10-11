@@ -62,3 +62,6 @@ def main(request):
 
 
     return render(request, 'map/main.html', items)
+
+def login(request):
+    return render(request, 'map/login.html')

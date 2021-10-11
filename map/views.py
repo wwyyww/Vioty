@@ -6,9 +6,6 @@ from map.models import Cctv, Violent, User
 import json
 import bcrypt
 
-# from django.contrib.auth.models import User
-# from django.contrib import auth
-
 
 def main(request):
     url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
@@ -64,29 +61,32 @@ def login(request):
     if request.method=="POST":
         loginid=request.POST['ID']
         loginpwd=request.POST['PW']
+        request.session['loginOk'] = False
         if User.objects.filter(id=loginid).exists():
             loginuser = User.objects.get(id = loginid)
-            if loginuser.password == loginpwd:
+            print(loginid)
+            print(id)
+            if bcrypt.checkpw(loginpwd.encode('utf-8'), loginuser.password.encode('utf-8')) :
                 request.session['loginOK'] = True
                 context ={
                     "result" : "로그인 성공"
                 }
+                return redirect('/')
+                print("성공")
             else :
                 request.session['loginOK'] = True
                 context ={
                     "result" : "로그인 실패"
                 }
+                print("실패1")
         else :
             request.session['loginOK'] = True
             context ={
                 "result" : "로그인 실패"
             }
+            print("실패2")
 
     return render(request, 'map/login.html')
-
-def logout(request):
-    auth.logout(request)
-    return redirect('/')
 
 def signup(request):
     if request.method=="POST":

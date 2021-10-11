@@ -6,9 +6,12 @@
      </head>
 <body>
    <h1>vioty</h1>
+   <form method="POST" action="{%url 'login'%}">
+   {% csrf_token %}
         <input id="ID" name="ID" type="text"/>
         <input id="PW" name="PW" type="password"/>
         <button type="submit">LOGIN</button>
+    </form>
 </body>
 
 </html>

@@ -20,7 +20,9 @@ import json
 #     return render(request, 'main.html', context)
 
 def main(request):
-    url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
+    # url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
+
+    # url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
 
     cctv_result=[]
     res=requests.get(url)
@@ -32,7 +34,7 @@ def main(request):
         cctv = Cctv()
         cctv.latitude = float(result['WGSXPT']) 
         cctv.longtitude = float(result['WGSYPT'])
-        cctv.address = result['ADDR']
+        cctv.address = str(result['ADDR'])
         cctv.save()
 
         location = {
@@ -43,6 +45,7 @@ def main(request):
 
     
     class_object=Cctv.objects.all()
+    
 
     data=json.dumps(cctv_result)
 

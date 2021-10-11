@@ -1,3 +1,4 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import render, redirect
 import requests
 from bs4 import BeautifulSoup
@@ -5,8 +6,8 @@ from map.models import Cctv, Violent, User
 import json
 import bcrypt
 
-from django.contrib.auth.models import User
-from django.contrib import auth
+# from django.contrib.auth.models import User
+# from django.contrib import auth
 
 
 def main(request):
@@ -108,5 +109,7 @@ def signup(request):
                 agency=agency
             )
             user.save()
+            
+            return HttpResponseRedirect('')
 
     return render(request, 'map/signup.html')

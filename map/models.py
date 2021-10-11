@@ -24,11 +24,11 @@ class User(models.Model):
     class meta:
         db_table = 'user'
 
-    id = models.CharField(max_length=32, unique=True, primary_key=True)
-    password = models.CharField(max_length=32)
-    name = models.CharField(max_length=32)
-    email = models.CharField(max_length=32, unique=True)
-    tel = models.CharField(max_length=32, unique=True)
-    agency = models.CharField(max_length=32)
+    id = models.CharField(max_length=255, unique=True, primary_key=True)
+    password = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255, unique=True)
+    tel = models.CharField(max_length=255, unique=True)
+    agency = models.CharField(max_length=255)
 
 

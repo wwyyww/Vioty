@@ -5,20 +5,6 @@ from map.models import Cctv, Violent
 import json
 
 
-# Create your views here.
-# def map(request):
-#     url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1/5/"
-
-#     res=requests.get(url)
-#     rdata=res.json()
-#     print(rdata)
-    
-#     context = {
-#         'rdata': rdata
-#     }
-    
-#     return render(request, 'main.html', context)
-
 def main(request):
     #db 추가작업
     # url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1/1000/"
@@ -60,12 +46,8 @@ def main(request):
     # data=json.dumps(cctv_result)
 
 
-
-
-
-
-
-    
-
-
     return render(request, 'map/main.html', items)
+
+
+def camera(request):
+    return render(request, 'map/camera.html')

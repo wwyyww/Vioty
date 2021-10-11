@@ -1,59 +1,54 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
    <meta charset="utf-8"/>
-   <title>Kakao 지도 시작하기</title>
+   <title>VIOTY</title>
 </head>
 <body>
-   <h1>지도 메인화면</h1>
-
-   <!-- <button class="button" onclick="toShow();">webcam 띄우기</button>
-
-
-
+	<header>
+		<div class="wrapper">
+		<h1>VIOTY</h1>
+		<nav>
+		   <ul class="menu">
+			  <li><a href="#">JOIN</a></li>
+			  <li><a href="">LOGIN</a></li>
+			  <li><a href="">MY PAGE</a></li>
+		   </ul>
+		   </nav> 
+		</div>
+	</header>
+	<div class="main_map">
+		<div id="map" style="width:100%;height:700px;"></div>
+	 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d02b33e49797d9e083e9e309c02505a2"></script>  <script>
+		var container = document.getElementById('map');
+		var options = {
+		   // center: new kakao.maps.LatLng(33.450701, 126.570667),
+		   center : new kakao.maps.LatLng(37.6151985549786, 127.062364906238),
+		   level: 3
+		};
+  
+		var map = new kakao.maps.Map(container, options);
+	 </script>
+  
+  
+	 <br>
+  
+  
+	 <div id="facility_lat" style="display: none">
+		{% for xy in location %}
+		   {{ xy.x }},
+		{% endfor %}
+	 </div>
+	 <div id="facility_lng" style="display: none">
+		{% for xy in location %}
+		   {{ xy.y }},
+		{% endfor %}
+	 </div>
+  
+    </div>
 	
-	<script>
-		function toShow() {
-			var iframe = document.getElementById('pdf');
-			iframe.style.display = 'block';
-			iframe.style.visibility = 'visible';
-		}
-	</script> -->
-
-   <br>
-   <div id="map" style="width:1200px;height:600px;"></div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d02b33e49797d9e083e9e309c02505a2"></script>
-   <script>
-      var container = document.getElementById('map');
-      var options = {
-         // center: new kakao.maps.LatLng(33.450701, 126.570667),
-         center : new kakao.maps.LatLng(37.6151985549786, 127.062364906238),
-         level: 3
-      };
-
-      var map = new kakao.maps.Map(container, options);
-   </script>
-
-   <h1>cctv 확인</h1>
-   {% for class in class_object %}
-      {{class.latitude}}
-      {{class.longtitude}}
-   {% endfor %}
-
-   <br>
-
-
-   <div id="facility_lat" style="display: none">
-      {% for xy in location %}
-         {{ xy.x }},
-      {% endfor %}
-   </div>
-   <div id="facility_lng" style="display: none">
-      {% for xy in location %}
-         {{ xy.y }},
-      {% endfor %}
-   </div>
-
 
 
    <script>

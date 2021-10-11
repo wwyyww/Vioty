@@ -19,8 +19,9 @@ import map.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', map.views.main, name='main' ),
-    path('login/', map.views.login, name='login'),
-    path('signup/', map.views.signup, name='signup'),
+    path('', include('map.urls')),# 추가 부분
+    # path('', map.views.main, name='main' ),
+    # path('login/', map.views.login, name='login'),
+    # path('signup/', map.views.signup, name='signup'),
 
 ]

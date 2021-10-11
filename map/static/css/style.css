@@ -1,0 +1,22 @@
+header{
+    height:75px;
+    position:fixed;
+    width: 100%;
+    z-index:9999;
+    top:0;
+    left:0;
+}
+
+h1{float:left;}
+.main_map{
+    width:80%;
+    height: 50%;
+    padding-top: 8%;
+    padding-left:10%;
+    padding-right:10%;
+}
+.menu{float:right;}
+.menu li{float:left;}
+.menu a{line-height:75px; padding:0 20px;}
+ .wrapper{width:80%; margin:0 auto; }
+ .clearfix{content:''; display:block; clear:both;}

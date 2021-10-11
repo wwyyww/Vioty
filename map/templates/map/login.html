@@ -20,12 +20,16 @@
         </div>
      </header>
 
+<style type="text/css">
+    #ID, #PW {width: 200pt; height: 20pt; font-size: 16pt;}
+</style>
+
    <div style="position: relative; text-align: center; display: inline-block; margin-left: 35%; margin-right: 30%; padding: 10%;">
    <form method="POST" action="{%url 'login'%}">
    {% csrf_token %}
         <input id="ID" name="ID" type="text" placeholder="아이디"/> <br>
         <input id="PW" name="PW" type="password" placeholder="비밀번호"/> <br>
-        <button type="submit" style="border-radius: 10px;">로그인</button>
+        <button type="submit" style="width: 206pt; height: 25pt;">로그인</button>
     </div>
     </body>
 

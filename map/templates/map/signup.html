@@ -1,28 +1,53 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <meta charset="utf-8"/>
-        <title>로그인</title>
+        <title>회원가입</title>
      </head>
 <body>
-   <h1>vioty</h1>
+        <header>
+                <div class="wrapper">
+                <h1>VIOTY</h1>
+                <nav>
+                        <ul class="menu">
+                
+                        <li><a href="">로그인</a></li>
+                        </ul>
+                        </nav> 
+                </div>
+        </header>
+
+
+
    <form method="POST" action="{%url 'signup' %}">
 {% csrf_token %}
-이름 : 
-        <input id="name" name="name" type="text"/> <br>
-아이디:
-        <input id="ID" name="ID" type="text"/> <br>
-비밀번호 : 
-        <input id="PW1" name="PW1" type="password"/> <br>
-비밀번호 확인 : 
-        <input id="PW2" name="PW2" type="password"/><br>
-이메일 : 
-        <input id="email" name="email" type="email"/> <br>
-전화번호 : 
-        <input id="tel" name="tel" type="tel"/> <br>
-사용 기관 : 
-        <input id="agency" name="agency" type="text"/> <br>
-        <button type="submit">SINGUP</button>
+
+
+<style type="text/css">
+        #name, #ID, #PW1, #PW2, #email, #tel, #agency {width: 200pt; height: 20pt; font-size: 16pt;}
+</style>
+
+
+<div style="position: relative; display: inline-block; margin-left: 35%; margin-right: 30%; padding: 10%; ">
+이름 <br>
+        <input id="name" name="name" type="text"/> <br> <br>
+아이디 <br>
+        <input id="ID" name="ID" type="text"/> <br> <br>
+비밀번호 <br>
+        <input id="PW1" name="PW1" type="password"/> <br> <br>
+비밀번호 확인 <br>
+        <input id="PW2" name="PW2" type="password"/><br> <br>
+이메일 <br>
+        <input id="email" name="email" type="email"/> <br> <br>
+전화번호 <br>
+        <input id="tel" name="tel" type="tel"/> <br> <br>
+사용 기관 <br>
+        <input id="agency" name="agency" type="text"/> <br> <br>
+        <button type="submit" style="width: 206pt; height: 25pt;">SINGUP</button>    
+</div>
+
     </form>
 </body>
 

@@ -47,7 +47,6 @@ def main(request):
     class_object=Cctv.objects.all()
 
     for object in class_object:
-        print("check : ", object.latitude)
         location = {
             'x' : object.latitude,
             'y' : object.longtitude

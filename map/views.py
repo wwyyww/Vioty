@@ -20,7 +20,7 @@ import json
 #     return render(request, 'main.html', context)
 
 def main(request):
-    url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1/5/"
+    url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1/1000/"
 
     cctv_result=[]
     res=requests.get(url)

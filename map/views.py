@@ -119,4 +119,5 @@ def index(request):
 
 
 def main_new(request):
+
     return render(request, 'map/main_new.html')

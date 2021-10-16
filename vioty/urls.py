@@ -24,5 +24,6 @@ urlpatterns = [
     path('login/', map.views.login, name='login'),
     path('signup/', map.views.signup, name='signup'),
     path('camera/', map.views.camera, name='camera'),
+    path('index/', map.views.index, name='index'),
 
 ]

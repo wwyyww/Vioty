@@ -113,3 +113,4 @@ def signup(request):
             return HttpResponseRedirect('')
 
     return render(request, 'map/signup.html')
+

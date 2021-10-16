@@ -17,7 +17,7 @@ h1{float:left;}
 }
 .menu{float:right;}
 .menu li{float:left; list-style:none;}
-.menu a{line-height:75px; padding:0 20px;}
+.menu a{line-height:75px; padding:0 20px; text-decoration: none;}
  .wrapper{width:80%; margin:0 auto; }
  .clearfix{content:''; display:block; clear:both;}
 
@@ -222,3 +222,5 @@ h1{float:left;}
   .bottomText {
     text-align: center;
   }
+
+  

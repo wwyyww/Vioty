@@ -1,0 +1,203 @@
+header{
+    height:75px;
+    position:fixed;
+    width: 100%;
+    z-index:9999;
+    top:0;
+    left:0;
+}
+
+h1{float:left;}
+.main_map{
+    width:80%;
+    height: 50%;
+    padding-top: 8%;
+    padding-left:10%;
+    padding-right:10%;
+}
+.menu{float:right;}
+.menu li{float:left; list-style:none;}
+.menu a{line-height:75px; padding:0 20px;}
+ .wrapper{width:80%; margin:0 auto; }
+ .clearfix{content:''; display:block; clear:both;}
+
+
+ *{
+
+    text-decoration: none;
+    font-family:sans-serif;
+  
+  }
+  
+  body {
+      height: 100vh;
+    background-image:url('../image/blue.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  
+  .loginForm {
+    position:absolute;
+    width:300px;
+    height:400px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+  }
+  
+  .signForm {
+    position:absolute;
+    width:300px;
+    height:670px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+  }
+  
+  .loginForm h2{
+    text-align: center;
+    margin: 30px;
+  }
+  
+  .nameForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+  .idForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+  
+  .pass1Form{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+  .pass2Form{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+
+  .emailForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+
+  .telForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+
+  .agencyForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+  
+  .name {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .id {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .pw1 {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .pw2 {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .email {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .tel {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .agency {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+
+  
+  .btn {
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:80%;
+    height:40px;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    background-position: left;
+    background-size: 200%;
+    color:white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+  }
+
+  
+  .bottomText {
+    text-align: center;
+  }

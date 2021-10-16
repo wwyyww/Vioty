@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'vioty',
         'USER':'root',
-        'PASSWORD':'',
+        'PASSWORD':'autoset',
         'HOST':'localhost',
         'PORT':'3306'
     }
@@ -125,6 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'map', 'static')
 # ]
@@ -135,3 +136,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

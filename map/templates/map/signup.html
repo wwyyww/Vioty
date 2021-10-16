@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
         <meta charset="utf-8"/>
         <title>회원가입</title>
      </head>
-<body>
+     <body width="100%" height="100%">
         <header>
                 <div class="wrapper">
                 <h1>VIOTY</h1>
@@ -21,32 +21,43 @@
 
 
 
-   <form method="POST" action="{%url 'signup' %}">
-{% csrf_token %}
-
-
 <style type="text/css">
         #name, #ID, #PW1, #PW2, #email, #tel, #agency {width: 200pt; height: 20pt; font-size: 16pt;}
 </style>
 
 
-<div style="position: relative; display: inline-block; margin-left: 35%; margin-right: 30%; padding: 10%; ">
-이름 <br>
-        <input id="name" name="name" type="text"/> <br> <br>
-아이디 <br>
-        <input id="ID" name="ID" type="text"/> <br> <br>
-비밀번호 <br>
-        <input id="PW1" name="PW1" type="password"/> <br> <br>
-비밀번호 확인 <br>
-        <input id="PW2" name="PW2" type="password"/><br> <br>
-이메일 <br>
-        <input id="email" name="email" type="email"/> <br> <br>
-전화번호 <br>
-        <input id="tel" name="tel" type="tel"/> <br> <br>
-사용 기관 <br>
-        <input id="agency" name="agency" type="text"/> <br> <br>
-        <button type="submit" style="width: 206pt; height: 25pt;">SINGUP</button>    
-</div>
+<form method="POST" action="{%url 'signup' %}"  class="signForm">
+        {% csrf_token %}
+        <h2>JOIN</h2>
+
+      
+
+        <div class="nameForm">       
+        
+        <input id="name" class="name" name="name" type="text" placeholder="NAME"/> 
+        </div>
+
+
+        <div class="idForm">
+                <input id="ID" class="id" name="ID" type="text" placeholder="ID"/> <br>
+            </div>
+            <div class="pass1Form">
+                <input id="PW1" class="pw1" name="PW1" type="password" placeholder="PW"/> <br>
+                </div>
+                <div class="pass2Form">
+                <input id="PW2" class="pw2" name="PW2" type="password" placeholder="PW Confirm"/> <br>
+                </div>
+                <div class="emailForm">
+                        <input id="email" class="email" name="email" type="email" placeholder="EMAIL"/> <br>
+                        </div>
+                <div class="telForm">
+                        <input id="tel" class="tel" name="tel" type="tel" placeholder="TEL"/> <br>
+                         </div>
+                <div class="agencyForm">
+                        <input  id="agency" class="agency" name="agency" type="text" placeholder="AGENCY"/> <br>
+                        </div>
+                <button type="submit" class="btn">SIGN UP</button>
+            <div class="bottomText"></div>
 
     </form>
 </body>

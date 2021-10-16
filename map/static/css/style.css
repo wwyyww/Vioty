@@ -10,11 +10,12 @@ header{
 h1{float:left; }
 
 .main_map{
-    width:80%;
+    width:70%;
     height: 50%;
-    padding-top: 8%;
-    padding-left:10%;
-    padding-right:10%;
+    padding-top: 15%;
+    padding-left:15%;
+    padding-right:15%;
+    position: absolute;
 }
 
 
@@ -24,9 +25,44 @@ body {
     background-repeat: no-repeat;
     background-size:cover;
   }
+  a{text-decoration: none;}
 
-.menu{float:right;}
-.menu li{float:left; list-style:none;}
-.menu a{line-height:75px; padding:0 20px;}
- .wrapper{width:80%; margin:0 auto; }
- .clearfix{content:''; display:block; clear:both;}
+  .menu{float:right;}
+  .menu li{float:left; list-style:none; color:white;}
+  .menu a{line-height:75px; padding:0 20px; text-decoration: none;color:white; }
+    .wrapper{width:80%; margin:0 auto; }
+   .clearfix{content:''; display:block; clear:both;}
+
+.nav{ 
+    position:absolute;
+    width:50%;
+    padding: 0px 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    }
+
+#gnb{
+    
+
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+  }
+  #gnb li{
+
+    display:inline;
+  }
+
+  #gnb a{
+    color: black;
+
+    display:inline-block;
+
+    padding:10px 8%;
+  }

@@ -1,25 +1,48 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-   <meta charset="utf-8"/>
-   <title>VIOTY</title>
-</head>
-<body>
-	<header>
-		<div class="wrapper">
-		<h1><a href="#">VIOTY</a></h1>
-		<nav>
-		   <ul class="menu">
-			  <li><a href="#">JOIN</a></li>
-			  <li><a href="">LOGIN</a></li>
-			  <li><a href="">MY PAGE</a></li>
-		   </ul>
-		   </nav> 
-		</div>
-	</header>
-	<div class="main_map" style="margin-top: 500px;">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <meta charset="utf-8"/>
+        <title>index</title>
+     </head>
+     <body width="100%" height="100%">
+        <header>
+                <div class="wrapper">
+                <h1 style="color:white"><a href="../main_new" >VIOTY</a></h1>
+                <nav>
+                        <ul class="menu">
+                            <li><a href="../login">LOGIN</a></li>
+                            <li><a href="../signup">JOIN</a></li>
+
+                        </ul>
+                        </nav> 
+                </div>
+        </header>
+        <style type="text/css">
+            a:visited { color: white; }
+        </style>
+
+ 
+    <nav class="nav"> 
+        <ul id="gnb"> 
+            <li>
+                <a href="">지도</a>
+            </li> 
+            <li>
+                <a href=""> CCTV 영상</a>
+            </li> 
+            <li>
+                <a href="">기록</a>
+            </li> 
+            <li>
+                <a href="">설정</a>
+            </li> 
+        </ul> 
+    </nav>
+   
+
+    <div class="main_map">
 		<div id="map" style="width:100%;height:700px;"></div>
 	 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d02b33e49797d9e083e9e309c02505a2"></script>  <script>
 		var container = document.getElementById('map');
@@ -64,6 +87,7 @@
          coffeePositions.push(new kakao.maps.LatLng(data_lat, data_lng));
       }
 
+      
 
       for (var i = 0; i < coffeePositions.length; i ++) {
          // 마커를 생성합니다
@@ -90,6 +114,3 @@
    </script>
 
 
-
-</body>
-</html>

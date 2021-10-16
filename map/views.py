@@ -116,3 +116,8 @@ def signup(request):
 
 def index(request):
     return render(request, 'map/index.html')
+
+
+def main_new(request):
+
+    return render(request, 'map/main_new.html')

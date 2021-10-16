@@ -78,6 +78,17 @@ h1{float:left;}
     padding: 5px 10px;
   }
   
+  .passForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+  .pass2Form{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 5px 10px;
+  }
+
   .pass1Form{
     border-bottom: 2px solid #adadad;
     margin: 30px;
@@ -118,6 +129,16 @@ h1{float:left;}
   }
   
   .id {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .pw {
     width: 100%;
     border:none;
     outline:none;

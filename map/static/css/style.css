@@ -7,7 +7,8 @@ header{
     left:0;
 }
 
-h1{float:left;}
+h1{float:left; }
+
 .main_map{
     width:80%;
     height: 50%;
@@ -15,6 +16,15 @@ h1{float:left;}
     padding-left:10%;
     padding-right:10%;
 }
+
+
+body {
+    height: 100vh;
+    background-image:url('../image/blue.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
 .menu{float:right;}
 .menu li{float:left; list-style:none;}
 .menu a{line-height:75px; padding:0 20px;}

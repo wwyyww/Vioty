@@ -10,11 +10,12 @@ header{
 h1{float:left; }
 
 .main_map{
-    width:80%;
+    width:70%;
     height: 50%;
-    padding-top: 8%;
-    padding-left:10%;
-    padding-right:10%;
+    padding-top: 15%;
+    padding-left:15%;
+    padding-right:15%;
+    position: absolute;
 }
 
 

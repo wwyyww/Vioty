@@ -1,49 +1,82 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">
-        <meta charset="utf-8"/>
-        <title>index</title>
-     </head>
-     <body>
-        <header>
-        <section id="one">
-                <div class="wrapper">
-                <h1>VIOTY</h1>
-                <nav>
-                        <ul class="menu">
-                            <li><a href="">LOGIN</a></li>
-                            <li><a href="">JOIN</a></li>
+        <div id="index_top">
+                <head>
+                        <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
+                        <meta charset="utf-8"/>
+                        <title>index</title>
+                </head>
+                
+                        <body width="100%" height="100%">
+                                
+                                <header style="background-image: url('../../static/image/blue.jpg');">
+                                        <div class="wrapper">
+                                        
+                                        <h1>VIOTY</h1>
+                                        
+                                        <nav>
+                                                <ul class="menu">
+                                                <li><a href="">LOGIN</a></li>
+                                                <li><a href="">JOIN</a></li>
 
-                        </ul>
-                        </nav> 
-                </div>
-                <Br><Br><br>
-                Vioty, 실시간 CCTV 폭력 감지 시스템
+                                                </ul>
+                                                </nav>  
+                                        
+                                        </div>
+                                </header>
+        </div>     
+        <article>
+                <section id="index_h1"> 지능형 CCTV </section>
+                <section id="index_s1">
+                        <h2 style="font-size: 30pt;">Overview</h2>
+                        <p>
+                        WEB에서의 다채널 실시간 관제 및 영상조회의 한계성을 보완하여 다회선 통합관제에 적합한
+                        PC Client 관제 시스템 UI를 설계 및 디자인하는 것이 목표로서 이미 운영중인 WEB시스템과
+                        통일성 유지하되 더 편리하도록 사용성을 개선하는 것이 중요하였습니다.
+                        </p>
+                </section>
+                <section  id="index_s2">
+                        <h2 style="font-size: 30pt;">하나의 PC Clinet에서 멀티 디스플레이로 영상 감시</h2>
+                        <p>
+                                하나의 관제화면에서 최대 64CH까지 영상을 분할하여 모니터링 하는 시스템으로
+                                작게 분할된 영상과 그에 대한 정보를 명확하게 인지할 수 있도록 화면을 구성했습니다.
+                        </p>
+                </section>
+        </article>
+        <footer id="index_f">
+                <h5> vioty </h5>
+        </footer>
 
-        </section>
-        </header>
-        <section id="two">
-        <div class="wrapper">
-                <div>
-                        <h2>기능1</h2>
-                        <p>설명~~~</p>
-                </div>
-                <div>
-                        <h2>기능2</h2>
-                        <p>설명~~~</p>
-                </div>
-                <div>
-                        <h2>기능3</h2>
-                        <p>설명~~~</p>
-                </div>
-        </section>
-
-
-
-
-
+<style type="text/css">
+        a:visited { color: white; }
+        #index_top {height: 400px;
+                width: auto;
+                margin: -8px;
+                background-image: url('../../static/image/blue.jpg');}
+        #index_h1{ font-size: 38pt;
+                margin-top: 5%;
+                margin-left: 10%;
+                padding: 60px;
+                font-weight: 600;}
+        #index_s1{
+                margin-top: 5%;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 60px;
+        }
+        #index_s2{
+                margin-top: 5%;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 60px;
+        }
+        #index_f{
+                margin-top: 5%;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 60px;
+        }
 
 </style>
 

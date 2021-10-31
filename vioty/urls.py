@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 import map.views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
    
@@ -27,6 +28,10 @@ urlpatterns = [
     path('index/', map.views.index, name='index'),
     path('main_new/', map.views.main_new, name='main_new'),
     path('main_new/sub_map/', map.views.sub_map, name='sub_map'),
+    path('main_new/sub_cctv/', map.views.sub_cctv, name='sub_cctv'),
+    path('main_new/sub_record/', map.views.sub_record, name='sub_record'),
+    path('main_new/sub_setting/', map.views.sub_setting, name='sub_setting'),
+    
     
 
 ]

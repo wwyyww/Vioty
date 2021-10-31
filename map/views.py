@@ -125,3 +125,12 @@ def main_new(request):
 
 def sub_map(request):
     return render(request, 'map/main_new/sub_map.html')
+
+def sub_cctv(request):
+    return render(request, 'map/main_new/sub_cctv.html')
+
+def sub_record(request):
+    return render(request, 'map/main_new/sub_record.html')
+
+def sub_setting(request):
+    return render(request, 'map/main_new/sub_setting.html')

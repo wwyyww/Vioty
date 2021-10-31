@@ -1,0 +1,33 @@
+header{
+    height:75px;
+    position:fixed;
+    width: 100%;
+    z-index:9999;
+    top:0;
+    left:0;
+}
+
+h1{float:left; } 
+
+
+.menu{float:right;}
+.menu li{float:left; list-style:none;}
+.menu a{line-height:75px; padding:0 20px;}
+.wrapper{
+     width:80%; 
+     margin:0 auto; 
+    }
+#one{
+    height: 70vh;
+    background-image:url('../image/blue.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+}
+#two{
+    overflow: auto;		
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+ .clearfix{content:''; display:block; clear:both;}

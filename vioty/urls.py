@@ -26,5 +26,7 @@ urlpatterns = [
     path('camera/', map.views.camera, name='camera'),
     path('index/', map.views.index, name='index'),
     path('main_new/', map.views.main_new, name='main_new'),
+    path('main_new/sub_map/', map.views.sub_map, name='sub_map'),
+    
 
 ]

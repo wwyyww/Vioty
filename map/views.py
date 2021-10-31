@@ -121,3 +121,7 @@ def index(request):
 def main_new(request):
 
     return render(request, 'map/main_new.html')
+
+
+def sub_map(request):
+    return render(request, 'map/main_new/sub_map.html')

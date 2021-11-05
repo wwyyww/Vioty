@@ -11,16 +11,18 @@ h1{float:left; }
 
 
 .main_map{
-  width:70%;
-  height: 50%;
-  padding-top: 15%;
-  padding-left:15%;
-  padding-right:15%;
+  width:100%;
+  height: 100%;
   position: absolute;
 }
 
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
 
 body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     height: 100vh;
     background-image:url('../image/blue.jpg');
     background-repeat: no-repeat;
@@ -35,13 +37,13 @@ body {
    .clearfix{content:''; display:block; clear:both;}
 
 .nav{ 
-    position:relative;
-    width:50%;
+    position:fixed;
+    width:700px;
     padding: 0px 20px;
     background-color:#001941;
     text-align:center;
-    top:20%;
-    left:50%;
+    top:150px;
+    left:930px;
     transform: translate(-50%,-50%);
     border-radius: 15px;
     }

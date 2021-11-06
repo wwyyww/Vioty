@@ -40,12 +40,12 @@ body {
 
 .nav{ 
     position:fixed;
-    width:700px;
-    padding: 0px 20px;
+    width:50%;
+ 
     background-color:#001941;
     text-align:center;
     top:150px;
-    left:960px;
+    left:50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
     }
@@ -71,3 +71,5 @@ body {
 
     padding:10px 8%;
   }
+
+

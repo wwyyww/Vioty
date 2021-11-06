@@ -21,6 +21,8 @@ body::-webkit-scrollbar {
 }
 
 body {
+  overflow-x: auto;
+     white-space:nowrap;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     height: 100vh;
@@ -43,7 +45,7 @@ body {
     background-color:#001941;
     text-align:center;
     top:150px;
-    left:930px;
+    left:960px;
     transform: translate(-50%,-50%);
     border-radius: 15px;
     }

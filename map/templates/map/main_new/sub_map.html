@@ -1,13 +1,52 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" >
+        <link rel="stylesheet" type="text/css" href="{% static 'css/sub_style.css' %}">
         <meta charset="utf-8"/>
      </head>
-     <body width="1200px" height="600px">
 
-        <div class="main_map" >
-            <div id="map" style="width:1200px;height:600px;"></div>
+     <body>
+        <div id="list">
+               <ul id="camera_num" style="float:left; position: absolute; width:220px; height:590px; 
+               background-color:#001941;color:aliceblue;; 
+               "  > 
+               
+               <li>
+                  <h3>카메라 목록</h3>
+               </li>
+               <li>
+                   <a href="../main_new/sub_map" target="html-box" 
+                   style="color:white;
+                   text-decoration: none;">
+                     카메라1</a>
+               </li> 
+               <li>
+                   <a href="../main_new/sub_cctv" target="html-box"  
+                   style="color:white;
+                   text-decoration: none;">
+                     카메라2</a>
+               </li> 
+               <li>
+                   <a href="../main_new/sub_record"  target="html-box"  
+                   style="color:white;
+                   text-decoration: none;">
+                      카메라3</a>
+               </li> 
+               <li>
+                   <a href="../main_new/sub_setting"  target="html-box" 
+                   style="color:white;
+                   text-decoration: none;">
+                     카메라4</a>
+               </li> 
+     <body>
+
+
+               </ul> 
+               </div>
+               
+               <div id="map" style="position: absolute;width:900px;height:600px; left:220px;margin-top: 16px;"></div>
+            
          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d02b33e49797d9e083e9e309c02505a2"></script>  <script>
             var container = document.getElementById('map');
             var options = {
@@ -78,5 +117,5 @@
     
     
     
-    </body>
+
     </html>

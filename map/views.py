@@ -134,3 +134,6 @@ def sub_record(request):
 
 def sub_setting(request):
     return render(request, 'map/main_new/sub_setting.html')
+
+def sub_stats(request):
+    return render(request, 'map/main_new/sub_stats.html')

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" >
+        <meta charset="utf-8"/>
+     </head>
+                
+    <body width="1200px" height="600px">
+
+        <nav>
+           <ul>
+            <li class="box">
+                카메라 이름 <br>
+                <input id="camera_name" type="text"/>
+            </li>
+            
+            <li class="box">
+                조회기간 <br>
+                <input id="start_date" type="date"/>
+                <input id="end_date" type="date"/>
+            </li>
+    
+            <li>
+                <button type="submit" class="btn" id="lookup">조회</button>
+            </li>
+            <li>
+                <button type="button" onclick="location.href='../../main_new/sub_stats'" class="btn" id="stats">통계</button>
+            </li>
+            
+    
+        </ul> 
+        </nav>
+
+        
+
+        <table width = "1000px">
+            <tr>
+                <th>시간</th>
+                <th>감지 카메라</th>
+                <th>사진</th>
+                <th>상세정보</th>
+            </tr>
+
+            <tr>
+                <td>2021-10-16 17:00:01</td>
+                <td>서울시 노원구 화랑로</td>
+                <td><button class="btn2">이미지</button></td>
+                <td><button class="btn2">상세보기</button></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+
+        </table>
+
+
+        <style type="text/css">
+
+    nav{ 
+        position:fixed;
+        width:1000px;
+        height: 90px;
+        background-color:#001941;
+        text-align:left;
+        margin-left: 100px;       
+    }
+
+        ul{
+            list-style: none;
+
+        }
+
+            li{
+            color: white;
+            float: left;
+
+
+        }
+        .box{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        input{
+            background-color: #58667D;
+            border: none;
+            outline: none;
+            font-size: large;
+            width: 150px;
+            height: 30px;
+            color: white;
+            margin-top: 8px;
+        }
+
+        .btn{
+            width: 80px;
+            height: 40px;
+            margin-left: 38px;
+            margin-right: 0px;
+            margin-top: 20px;
+            background-color: #5263CB;
+            border: none;
+            outline: none;
+            color: white;
+        }
+
+        .btn2{
+            background-color: #58667D;
+            color: white;
+            border: none;
+            outline: none;
+        }
+
+
+            table{
+                position: fixed;
+                margin-left: 100px;
+                margin-top: 100px;
+                border-collapse: collapse;
+                color: white;
+                text-align: center;
+            }
+            th{
+                height: 50px;
+                background-color: #194087;
+            }
+            td{
+                height:60px;
+                background-color: #001941;
+                
+            }
+
+        </style>
+    
+
+    </body>
+
+</html>

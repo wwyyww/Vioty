@@ -31,6 +31,7 @@ urlpatterns = [
     path('main_new/sub_cctv/', map.views.sub_cctv, name='sub_cctv'),
     path('main_new/sub_record/', map.views.sub_record, name='sub_record'),
     path('main_new/sub_setting/', map.views.sub_setting, name='sub_setting'),
+    path('main_new/sub_stats/', map.views.sub_stats, name='sub_stats'),
     
     
 

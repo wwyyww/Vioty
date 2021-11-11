@@ -4,58 +4,106 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <meta charset="utf-8"/>
-        <title>main_new</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title%}main_new{% endblock %}</title>
+
+        <style>
+
+            .topnav {
+                top: 0;
+                height: 60px;
+                width: 100%;
+                position: fixed;
+                z-index:1;
+                background-color:#001941;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+    
+            .topnav .center { 
+                display:flex;
+                align-items:right;
+            }
+    
+            .topnav a {
+                text-align: center;
+                margin: 0px 5px 0px 5px;
+            }
+    
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 25px;
+            }
+    
+            a:hover {
+                color: white;
+            }
+    
+            .sidemenu {
+                height: 100%;
+                width: 200px;
+                position: fixed;
+                z-index:1;
+                top: 60px;
+                left: 0;
+                background-color:#001941;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+    
+            .sidemenu li {
+                margin:10px;
+            }
+    
+            .wrap_content {
+                margin-top: 70px;
+                margin-left: 210px;
+                margin-right: 10px;
+            }
+    
+            ul {
+                list-style:none;
+                list-style-position: outside;
+            }
+    
+            body {
+                margin: 0px;
+                background-color: #F0EDCC;
+            }
+    
+        </style>
      </head>
 
-     <body width="100%" height="100%" >
+     <body>
 
-        <header>
-                <div class="wrapper">
-                <h1 style="color:white"><a href="../main_new" >VIOTY</a></h1>
-                <nav>
-                        <ul class="menu">
-                            <li><a href="../login">LOGIN</a></li>
-                            <li><a href="../signup">JOIN</a></li>
-
-                        </ul>
-                        </nav> 
+        <div class="topnav">
+            <h1 style="color:white"><a href="{% url 'main_new' %}" >VIOTY</a></h1>
+            <div class="center">
+                <div class="menu">
+                    <a href="../login">LOGIN</a>
+                    <a href="../signup">JOIN</a>
                 </div>
-        </header>
-        <style type="text/css">
-            a:visited { color: white; }
-        </style>
-
-    <div class="all" style="overflow:hidden;">
-    <nav class="nav"> 
-        <ul id="gnb" style="list-style:none;" >
-            <li>
-                <a href="../main_new/sub_map" target="html-box">지도</a>
-            </li> 
-            <li>
-                <a href="../main_new/sub_cctv" target="html-box"> CCTV 영상</a>
-            </li> 
-            <li>
-                <a href="../main_new/sub_record"  target="html-box">기록</a>
-            </li> 
-            <li>
-                <a href="../main_new/sub_setting"  target="html-box">설정</a>
-            </li> 
-        </ul> 
-    </nav>
+            </div>
+        </div>
 
 
-   
-    <iframe src="../main_new/sub_map"
-    style= "width:60%;
-    height: 60%;
-    position:absolute;
-    margin-top:15%;
-    margin-left: 20%;
-    border:0;
+        <div class="sidemenu">
+            <ul>
+                <li><a href="{% url 'sub_map' %}">지도</a></li>
+                <li><a href="{% url 'sub_cctv' %}">CCTV 영상</a></li>
+                <li><a href="{% url 'sub_record' %}">기록</a></li>
+                <li><a href="{% url 'sub_setting' %}">설정</a></li>
+            <ul>
+        </div>
     
-
-    "
-    name="html-box"></iframe>
-    </div>
+        <div class="wrap_content">
+            <div id="content" name="content" class="container">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
      </body>
 </html>

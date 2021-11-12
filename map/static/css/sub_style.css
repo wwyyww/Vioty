@@ -1,6 +1,6 @@
-ul{
+.m_ul{
     list-style:none;
     padding-top:10px;
     }
 
-li{padding-top:20px;}
+.m_li{padding-top:20px;}

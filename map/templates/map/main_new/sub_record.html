@@ -13,8 +13,8 @@
                 
     <body>
 
-        <nav>
-           <ul>
+        <div class="r_nav">
+             <ul>
             <li class="box">
                 카메라 이름 <br>
                 <input id="camera_name" type="text"/>
@@ -35,7 +35,10 @@
             
     
         </ul> 
-        </nav>
+        </div>
+
+          
+        
 
         
 
@@ -73,15 +76,23 @@
 
         <style type="text/css">
 
-    nav{ 
-        position:absolute;
-        width:97.5%;
-        height: 17%;
+    .r_nav{
+        position: absolute;
+        width:1000px;
+        height: 100px;
+        margin-left: 100px;
+        margin-top: -200px;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);  
         background-color:#001941;
-        text-align:left;      
+        text-align:left;
+
+   
     }
 
         ul{
+            
             list-style: none;
 
         }
@@ -93,23 +104,22 @@
 
         }
         .box{
-            margin-left: 10%;
+            margin-left: 5%;
         }
         input{
             background-color: #58667D;
             border: none;
             outline: none;
             font-size: large;
-            width: 40%;
-            height: 25%;
+            width: 60%;
+            margin-top: 5%;
             color: white;
         }
 
         .btn{
             width: 100%;
-            height: 200%;
-            margin-left: 20px;
-            margin-right: 0px;
+            height: 50px;
+            margin-left: 500%;
             margin-top: 20px;
             background-color: #5263CB;
             border: none;
@@ -126,12 +136,16 @@
 
 
             table{
-                position: fixed;
-                margin-top: 12%;
+                position: absolute;
                 border-collapse: collapse;
                 color: white;
                 text-align: center;
-                width:97.5%;
+                margin-left: 100px;
+                margin-top: 30px;
+                width:1000px;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%); 
             }
             th{
                 height: 50px;

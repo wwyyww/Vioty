@@ -19,22 +19,22 @@
 
         <div class="r_nav">
              <ul>
-            <li class="box">
+            <li class="box" style="margin-left: 60px; margin-top: 5px;">
                 카메라 이름 <br>
                 <input id="camera_name" type="text"/>
             </li>
             
-            <li class="box">
+            <li class="box" style="margin-left: 50px;">
                 조회기간 <br>
                 <input id="start_date" type="date"/>
                 <input id="end_date" type="date"/>
             </li>
     
-            <li>
+            <li class="box" style="margin-left: 90px;">
                 <button type="submit" class="btn" id="lookup">조회</button>
             </li>
-            <li>
-                <button type="button" onclick="location.href='../../main_new/sub_stats'" class="btn" id="stats">통계</button>
+            <li class="box" style="margin-left: 10px;">
+                <button type="button" onclick="location.href='../../main_new/sub_stats' " class="btn" id="stats">통계</button>
             </li>
             
     
@@ -82,29 +82,23 @@
 
     .r_nav{
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -150px;
+        margin-left: 100px;
         width:1000px;
         height: 100px;
         background-color:#001941;
-        text-align:left;
-        margin: 0px -16px; 
-        text-align:left;    
+        text-align:left; 
     }
 
-        ul{
-            
-            list-style: none;
 
-        }
-
-            li{
+        .box{
             color: white;
             float: left;
-
-
         }
-        .box{
-            margin-left: 5%;
-        }
+
         input{
             background-color: #58667D;
             border: none;
@@ -116,10 +110,9 @@
         }
 
         .btn{
-            width: 100%;
+            width: 80px;
             height: 50px;
-            margin-left: 500%;
-            margin-top: 20px;
+            margin-top: 10px;
             background-color: #5263CB;
             border: none;
             outline: none;
@@ -136,9 +129,11 @@
 
             table{
                 position: absolute;
-                margin: 0px -16px; 
-                margin-top:110px;
-                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-top: 50px;
+                margin-left: 100px;
 
                 border-collapse: collapse;
                 color: white;

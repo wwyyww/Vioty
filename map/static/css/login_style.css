@@ -38,8 +38,8 @@ h1{float:left;}
   
   .loginForm {
     position:absolute;
-    width:350px;
-    height:330px;
+    width:20%;
+    height:25%;
     padding: 30px, 20px;
     background-color:#FFFFFF;
     text-align:center;
@@ -51,8 +51,8 @@ h1{float:left;}
   
   .signForm {
     position:absolute;
-    width:350px;
-    height:670px;
+    width:20%;
+    height:60%;
     padding: 30px, 20px;
     background-color:#FFFFFF;
     text-align:center;
@@ -64,7 +64,7 @@ h1{float:left;}
   
   .loginForm h2{
     text-align: center;
-    margin: 30px;
+    margin: 5%;
   }
   
   .nameForm{
@@ -133,7 +133,7 @@ h1{float:left;}
     border:none;
     outline:none;
     color: #636e72;
-    font-size:16px;
+    font-size:3%;
     height:25px;
     background: none;
   }

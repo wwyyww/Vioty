@@ -10,13 +10,24 @@
 <html >
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'css/sub_style.css' %}">
-        
         <meta charset="utf-8"/>
+        <script>
+            function IdPopup(){
+                window.open("{% url 'IdPopup' %}", "IdPopup", "width=500, height=300, left=100, top=50");
+            }
+            function PwPopup(){
+                window.open("{% url 'PwPopup' %}", "PwPopup", "width=500, height=300, left=100, top=50");
+            }
+        </script>
      </head>
                 
     <body width="1200px" height="600px">
         <div>
-            <button style="margin-top: 20%;">LOGOUT</button>
+            <button style="margin-top: 15%;">LOGOUT</button>
+            <br>
+            <button onclick="IdPopup();" style="margin-top: 50px;">ID 재설정</button>
+            <br>
+            <button onclick="PwPopup();" style="margin-top: 50px;">비밀번호 재설정</button>
             <br>
             <button style="margin-top: 50px;">회원탈퇴</button>
         </div>
@@ -26,7 +37,6 @@
         <style type="text/css">
             body{
                 background-color: white;
-                border-radius: 15;
             }
             div{
                 text-align: center;

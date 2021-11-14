@@ -137,3 +137,9 @@ def sub_setting(request):
 
 def sub_stats(request):
     return render(request, 'map/main_new/sub_stats.html')
+
+def IdPopup(request):
+    return render(request, 'map/main_new/IdPopup.html')
+
+def PwPopup(request):
+    return render(request, 'map/main_new/PwPopup.html')

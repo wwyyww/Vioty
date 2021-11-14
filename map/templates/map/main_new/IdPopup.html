@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>아이디 변경</title>
+</head>
+<body>
+    <style>
+        table{
+            margin: 40px 40px;
+        }
+        table, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        .side{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 20px;
+            color: white;
+            background-color:#001941;
+
+        }
+
+        .input {
+            padding-left: 10px;
+            padding-right: 90px;
+        }
+
+        button {
+            background-color: #001941;
+            color: white;
+            padding: 10px 20px;
+            margin: -10px 210px;
+        }
+    </style>
+<form action="POST">
+    {% csrf_token %}
+        <table>
+        <tr>
+            <td class="side">기존아이디</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="side">새아이디 입력</td>
+            <td class="input"><input type="text" name="n_id"></td>
+        </tr>
+    </table>
+    
+    <button type="submit">확인</button>
+</form>
+
+
+</body>
+</html>

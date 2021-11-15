@@ -138,6 +138,11 @@ def sub_setting(request):
 def sub_stats(request):
     return render(request, 'map/main_new/sub_stats.html')
 
+
+def sub_planning(request):
+    return render(request, 'map/main_new/sub_planning.html')
+
+
 def IdPopup(request):
     return render(request, 'map/main_new/IdPopup.html')
 

@@ -1,11 +1,9 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render, redirect
 import requests
-from bs4 import BeautifulSoup
-from map.models import Cctv, Violent, User
-import json
+from map.models import Cctv,  User
 import bcrypt
-
+from django.contrib import auth
 
 def main(request):
     url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
@@ -71,7 +69,7 @@ def login(request):
                 context ={
                     "result" : "로그인 성공"
                 }
-                return redirect('/')
+                return redirect('/main_new')
                 print("성공")
             else :
                 request.session['loginOK'] = True
@@ -148,3 +146,7 @@ def IdPopup(request):
 
 def PwPopup(request):
     return render(request, 'map/main_new/PwPopup.html')
+
+def logout(request):
+    auth.logout(request)
+    return render(request, 'map/main_new/index.html')

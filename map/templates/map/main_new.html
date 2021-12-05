@@ -10,6 +10,12 @@
 
         <style>
 
+            .hello{
+                position:fixed;
+                right:0;
+                top:25px;
+            }
+
             .topnav {
                 top: 0;
                 width: 100%;
@@ -32,7 +38,7 @@
             .topnav a {
                 float:left;
                 text-align: center;
-                margin: 0px 10px 10px 51px;
+                margin: 0px 0px 0px 33px;
             }
     
             a {
@@ -50,7 +56,6 @@
                 width: 200px;
                 position: fixed;
                 z-index:1;
-                top: 60px;
                 left: 0;
                 background-color:#001941;
                 overflow-x: hidden;
@@ -88,6 +93,7 @@
                 }
 
             .m_li{padding-top:20px;}
+            
     
         </style>
      </head>
@@ -95,8 +101,8 @@
      <body>
 
         <div class="topnav">
-            <h1 style="color:white"><a href="{% url 'main_new' %}" >VIOTY</a></h1>
-            <div class="hello">님 안녕하세요.</div> 
+            <h1 style="color:white"><a href="{% url 'main_new' %}" ><img src="/static/image/vioty_ver1.png" width="96px" height="30px">
+            <div class="hello">vioty님, 안녕하세요.</div> 
             
         </div>
 

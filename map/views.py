@@ -65,10 +65,11 @@ def login(request):
             if bcrypt.checkpw(loginpwd.encode('utf-8'), loginuser.password.encode('utf-8')) :
                 request.session['loginOK'] = True
                 context ={
+                    "userid" : loginid,
                     "result" : "로그인 성공"
                 }
-                return redirect('/main_new')
-                print("성공")
+                return render(request, 'map/main_new.html', context)
+                print("로그인 성공")
             else :
                 request.session['loginOK'] = True
                 context ={

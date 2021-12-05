@@ -5,7 +5,7 @@ from map.models import Cctv,  User
 import bcrypt
 from django.contrib import auth
 
-def main(request):
+def sub_map(request):
     url="http://openapi.seoul.go.kr:8088/6743624b646c6b323433736e6f7647/json/safeOpenCCTV_nw/1001/1810/"
 
     #db 추가작업
@@ -48,7 +48,7 @@ def main(request):
     # data=json.dumps(cctv_result)
 
 
-    return render(request, 'map/main.html', items)
+    return render(request, 'map/main_new/sub_map.html', items)
 
 
 
@@ -62,8 +62,6 @@ def login(request):
         request.session['loginOk'] = False
         if User.objects.filter(id=loginid).exists():
             loginuser = User.objects.get(id = loginid)
-            print(loginid)
-            print(id)
             if bcrypt.checkpw(loginpwd.encode('utf-8'), loginuser.password.encode('utf-8')) :
                 request.session['loginOK'] = True
                 context ={
@@ -121,8 +119,8 @@ def main_new(request):
     return render(request, 'map/main_new.html')
 
 
-def sub_map(request):
-    return render(request, 'map/main_new/sub_map.html')
+# def sub_map(request):
+#     return render(request, 'map/main_new/sub_map.html')
 
 def sub_cctv(request):
     return render(request, 'map/main_new/sub_cctv.html')
